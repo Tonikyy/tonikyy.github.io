@@ -1,105 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-                integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-                crossorigin="anonymous">
-        <title>Toni Heino</title>
-        <link rel="StyleSheet" href="css/tyylit.css" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toni Heino - Full Stack Developer & System Specialist. Portfolio and professional background.">
+    <title>Toni Heino | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tyylit.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Optional: if you want icons, otherwise we use text/images -->
 </head>
 <body>
-        <img src="./Images/07b2.jpg" alt="minä" width="250">
-        <br>
-        <h2 id="userInfo" style=""></h2>
 
-        <h2><a href="mailto:tonheino@gmail.com">tonheino@gmail.com</a></h2>
-
-        <h2>IT-Tradenomiopiskelija, Laurea Leppävaara</h2>
-        <h2>QA Automation Engineer<br> @ </h2>
-
-        <div class="container tex-center">
-                <div class="row mb-1">
-                        <div class="col-sm"></div>
-                        <div class="col-sm-2">
-                                <a target="_blank" ; href="https://nexetic.com">
-                                        <img src="./Images/nexeticLogo.png" alt="githublogo" width="120">
-                                </a>
-                        </div>
-                        <div class="col-sm"></div>
-                </div>
+    <header class="hero">
+        <div class="container">
+            <div class="profile-image-container">
+                <img src="./Images/07b2.jpg" alt="Toni Heino" class="profile-img">
+            </div>
+            <h1 class="name">Toni Heino</h1>
+            <h2 class="title">Full Stack Developer & System Specialist</h2>
+            <p class="subtitle">.NET, Azure, Angular, Graph API & Test Automation</p>
+            
+            <div class="cta-buttons">
+                <a href="mailto:tonheino@gmail.com" class="btn btn-primary">Contact Me</a>
+                <a href="https://www.linkedin.com/in/tonikyy/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="container tex-center">
-                <div class="row mb-1">
-                        <div class="col-sm"></div>
-                        <div class="col-sm-2">
-                                <a target="_blank" ; href="https://github.com/Tonikyy/tonikyy.github.io">
-                                        <img src="./Images/GitHubLogo.png" alt="githublogo" width="120">
-                                </a>
-                        </div>
-                        <div class="col-sm"></div>
-                </div>
-        </div>
-        <div class="container tex-center">
-                <div class="row">
-                        <div class="col-sm"></div>
-                        <div class="col-sm-2">
-                                <a target="_blank" ; href="https://www.linkedin.com/in/toni-heino-598145208/">
-                                        <img src="./Images/linkedinlogo.png" alt="linkedinlogo" width="150">
-                                </a>
-                        </div>
-                        <div class="col-sm"></div>
-                </div>
-        </div>
-        <p style="display: none;"> <span id="visitCount"></span></p>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-                crossorigin="anonymous"></script>
-        <script>
-                function calculateAge(birthdate) {
-                        const today = new Date();
-                        const birthDate = new Date(birthdate);
-                        let age = today.getFullYear() - birthDate.getFullYear();
-                        if (today.getMonth() < birthDate.getMonth() || (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
-                                age--;
-                        }
+    </header>
 
-                        return age;
-                }
-                const name = "Toni Heino";
-                const birthdate = "1993-01-25";
-                const userInfoElement = document.getElementById("userInfo");
-                userInfoElement.textContent = `${name}, ${calculateAge(birthdate)}`;
-        </script>
-        <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                  // Check if the visit count exists in local storage
-                  if(localStorage.getItem("visitCount")) {
-                    // If it exists, increment it by 1
-                    let count = parseInt(localStorage.getItem("visitCount")) + 1;
-                    localStorage.setItem("visitCount", count);
-                  } else {
-                    // If it doesn't exist, set it to 1
-                    localStorage.setItem("visitCount", 1);
-                  }
-                });
-                </script>
-                <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                          // Display the visit count
-                          document.getElementById("visitCount").textContent = localStorage.getItem("visitCount");
-                        });
-                        </script>
+    <main class="container">
+        <section id="about" class="section">
+            <h3 class="section-title">About Me</h3>
+            <p>
+                I'm currently working as a Full Stack Developer with a focus on .NET and Azure.
+                Over the past years, I've built our test automation framework from scratch, contributed features to production, 
+                and taken responsibility in cross-functional collaboration with product, support, and R&D.
+            </p>
+            <p>
+                My strengths lie in learning and adapting to whatever is needed from me — whether it's automation, helping customers, 
+                backend development or cloud resources. With growing experience in Azure, Graph API, SQL, Angular and C#, 
+                I've now stepped into a full development role with the goal of becoming a fully independent backlog contributor.
+            </p>
+            <p>
+                Continuously building my developer capabilities while finishing my Bachelor of IT degree.
+            </p>
+        </section>
+
+        <section id="experience" class="section">
+            <h3 class="section-title">Experience</h3>
+            
+            <div class="job-card">
+                <div class="job-header">
+                    <h4 class="job-title">Full Stack Developer & System Specialist</h4>
+                    <span class="job-company">Nexetic</span>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">Nov 2025 - Present</span> • <span class="job-location">Espoo, Uusimaa, Finland</span>
+                </div>
+                <!-- Add descriptions or bullets if available later -->
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <h4 class="job-title">QA Automation Engineer</h4>
+                    <span class="job-company">Nexetic</span>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">Dec 2023 - Nov 2025</span> • <span class="job-location">Espoo, Uusimaa, Finland</span>
+                </div>
+                <ul class="job-details">
+                    <li>Sole ownership of technical support function before onboarding a replacement.</li>
+                    <li>Built company’s test automation solution from scratch.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="connect" class="section">
+            <div class="social-links">
+                <a href="https://github.com/Tonikyy/tonikyy.github.io" target="_blank" class="social-link">
+                    <img src="./Images/GitHubLogo.png" alt="GitHub" class="social-icon">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tonikyy/" target="_blank" class="social-link">
+                    <img src="./Images/linkedinlogo.png" alt="LinkedIn" class="social-icon">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://nexetic.com" target="_blank" class="social-link">
+                    <img src="./Images/nexeticLogo.png" alt="Nexetic" class="social-icon">
+                    <span>Nexetic</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Toni Heino. All rights reserved.</p>
+        <p class="subtle-link"><a href="https://tonikyy.github.io/OnlyMahas/">OnlyMahas</a></p>
+    </footer>
+
+    <!-- Visit Counter (Hidden logic maintained if needed, or we can improve it) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          if(localStorage.getItem("visitCount")) {
+            let count = parseInt(localStorage.getItem("visitCount")) + 1;
+            localStorage.setItem("visitCount", count);
+          } else {
+            localStorage.setItem("visitCount", 1);
+          }
+        });
+    </script>
 </body>
 </html>
