@@ -218,15 +218,25 @@ ul {
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    filter: grayscale(100%);
+    font-size: 3rem;
+    color: var(--text-secondary);
     transition: var(--transition);
 }
 
 .social-link:hover .social-icon {
-    filter: grayscale(0%);
+    color: var(--text-primary);
     transform: scale(1.1);
+}
+
+/* Specific style for image icons to match font icon size */
+.image-icon {
+    height: 3rem;
+    width: auto;
+    filter: grayscale(100%) brightness(1.2); /* Slight brightness boost for dark mode if needed */
+}
+
+.social-link:hover .image-icon {
+    filter: grayscale(0%);
 }
 
 /* Footer */
