@@ -85,6 +85,7 @@ ul {
     margin-bottom: var(--spacing-xs);
     background: linear-gradient(90deg, #58a6ff, #a371f7);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -137,6 +138,18 @@ ul {
     background-color: var(--card-bg);
 }
 
+.btn-accent {
+    background: linear-gradient(90deg, #a371f7, #58a6ff);
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 15px rgba(163, 113, 247, 0.4);
+}
+
+.btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(163, 113, 247, 0.6);
+}
+
 /* Sections */
 .section-title {
     font-size: 1.5rem;
@@ -144,6 +157,51 @@ ul {
     border-bottom: 2px solid var(--border-color);
     padding-bottom: var(--spacing-xs);
     display: inline-block;
+}
+
+.service-highlight-card {
+    background: linear-gradient(145deg, #161b22, #1c2128);
+    border: 2px solid #a371f7;
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.service-highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(163, 113, 247, 0.2);
+}
+
+.service-content {
+    flex: 2;
+}
+
+.service-content h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.service-cta {
+    flex: 1;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .service-highlight-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-cta {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .job-card {
@@ -232,7 +290,8 @@ ul {
 .image-icon {
     height: 3rem;
     width: auto;
-    filter: grayscale(100%) brightness(1.2); /* Slight brightness boost for dark mode if needed */
+    filter: grayscale(100%) brightness(1.2);
+    /* Slight brightness boost for dark mode if needed */
 }
 
 .social-link:hover .image-icon {
